@@ -32,8 +32,6 @@ def print_map(current):
     for key in directions:
         directions[key]=current["options"].get(key,"")
         
-    print("MAPA:")
-
     print_top(40,directions["n"])
     print_middle(40,directions["w"], directions["e"])
     print_bottom(40,directions["s"])
