@@ -1,4 +1,4 @@
-from colorama import Fore, Style, init
+from colorama import Fore, init
 
 from utils.terminal import clear_screen
 
@@ -45,10 +45,10 @@ def talk_in(location):
     npcs = location["npcs"]
 
     for index, (npc_name, npc_desc) in enumerate(npcs.items(), 1):
-        print(Fore.GREEN + f"═════════════════════════════")
-        print(Fore.GREEN + f" {index}. {npc_name}                ")
-        print(Fore.GREEN + f"═════════════════════════════")
-        print(Fore.WHITE + f"  {npc_desc}               \n")
+        print(Fore.GREEN + "═════════════════════════════")
+        print(Fore.GREEN + f" {index}. {npc_name}")
+        print(Fore.GREEN + "═════════════════════════════")
+        print(Fore.WHITE + f"  {npc_desc}\n")
 
     try:
         choice = int(
