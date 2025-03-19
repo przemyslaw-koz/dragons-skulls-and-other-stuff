@@ -1,11 +1,16 @@
-from colorama import Fore, Style
-import time
 import os
+import time
+
+from colorama import Fore, Style
+
 
 def clear_sreen():
     os.system("clear")
 
-en = Fore.RED + """________                                                                
+
+en = (
+    Fore.RED
+    + """________                                                                
 \______ \____________     ____   ____   ____   ______                   
  |    |  \_  __ \__  \   / ___\ /  _ \ /    \ /  ___/                   
  |    `   \  | \// __ \_/ /_/  >  <_> )   |  \\\___ \                    
@@ -22,9 +27,13 @@ ________   __  .__                             __          _____  _____
  /   |   \   __\  |  \_/ __ \_  __ \  /  ___/\   __\  |  \   __\\\   __\ 
 /    |    \  | |   Y  \  ___/|  | \/  \___ \  |  | |  |  /|  |   |  |   
 \_______  /__| |___|  /\___  >__|    /____  > |__| |____/ |__|   |__|   
-        \/          \/     \/             \/       """ + Style.RESET_ALL
+        \/          \/     \/             \/       """
+    + Style.RESET_ALL
+)
 
-pl = Fore.RED + """  _________               __   .__                          
+pl = (
+    Fore.RED
+    + """  _________               __   .__                          
  /   _____/ _____   ____ |  | _|__|                         
  \_____  \ /     \ /  _ \|  |/ /  |                         
  /        \  Y Y  (  <_> )    <|  |                         
@@ -41,15 +50,18 @@ _________                                __   .__    ____
 |  |/    \ /    \_/ __ \  \   __\__  \ |  |/ /  |/ __ \     
 |  |   |  \   |  \  ___/   |  |  / __ \|    <|  \  ___/     
 |__|___|  /___|  /\___  >  |__| (____  /__|_ \__|\___  >    
-        \/     \/     \/             \/     \/       \/     """ + Style.RESET_ALL
+        \/     \/     \/             \/     \/       \/     """
+    + Style.RESET_ALL
+)
+
 
 def print_logo_in(lang):
     clear_sreen()
-    if lang=='en':
+    if lang == "en":
         print(en)
-    elif lang=='pl':
+    elif lang == "pl":
         print(pl)
     else:
-        print(f'Language not supported - {lang}')
+        print(f"Language not supported - {lang}")
 
     time.sleep(1)
