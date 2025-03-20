@@ -75,11 +75,3 @@ def test_print_bottom_empty(capsys):
 
 def test_print_map():
     pass
-    # directions = {"n": "", "s": "", "e": "", "w": ""}
-
-    # for key in directions:
-    #    directions[key] = current["options"].get(key, "")
-
-    # print_top(40, directions["n"])
-    # print_middle(40, directions["w"], directions["e"])
-    # print_bottom(40, directions["s"])
