@@ -1,5 +1,3 @@
-import pytest
-
 from utils.map import find_longest_word, print_bottom, print_middle, print_top
 
 
