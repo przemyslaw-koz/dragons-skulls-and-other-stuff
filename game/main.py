@@ -21,8 +21,6 @@ def game_loop():
     while True:
         current = world[player.location]
 
-        # clear_screen()
-
         print(
             Fore.CYAN
             + f"\n📍 Jesteście w miejscu znanym jako: {player.location}"
