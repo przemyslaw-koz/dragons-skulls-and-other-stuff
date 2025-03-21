@@ -16,7 +16,8 @@ def test_go_forward(monkeypatch):
     monkeypatch.setattr("game.movement.get_user_direction", lambda: next(directions))
 
     monkeypatch.setattr(
-        "game.movement.move_to_new_location", lambda d, l: l["options"][d]
+        "game.movement.move_to_new_location",
+        lambda direction, location: location["options"][direction],
     )
 
     monkeypatch.setattr("game.movement.handle_invalid_direction", lambda: None)
