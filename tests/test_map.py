@@ -2,7 +2,7 @@ from utils.map import find_longest_word, print_bottom, print_middle, print_top
 
 
 def test_find_longest_word():
-    assert find_longest_word(["test1", "test22", "test333"])
+    assert find_longest_word(["test1", "test22", "test333"]) == "test333"
 
 
 def test_print_top(capsys):
