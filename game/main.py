@@ -1,6 +1,6 @@
 import time
 
-from colorama import Fore, initialise
+from colorama import Fore
 
 from game.npc import talk
 from game.player import Player
