@@ -1,16 +1,17 @@
 import time
 
-from colorama import Fore
+from colorama import Fore, initialise
 
 from game.npc import talk
 from game.player import Player
 from game.player_actions import get_player_actions, print_basic_actions
 from game.welcome import print_welcome
 from game.world import world
+from repository.tiny_db_repo import TinyDBWorldRepository
 from utils.terminal import clear_screen
 
 
-def game_loop():
+def game_loop(repository):
     player = Player("JANEK I JULEK")
     basic_actions = get_player_actions()
 
@@ -19,6 +20,7 @@ def game_loop():
     time.sleep(2)
 
     while True:
+        # TODO: take it from db
         current = world[player.location]
 
         print(
@@ -44,6 +46,7 @@ def game_loop():
         clear_screen()
 
         if action in basic_actions:
+            # TODO: change it to use location name and inside method send request to db if needed
             new_location = basic_actions[action](current)
             if new_location:
                 player.location = new_location
@@ -52,5 +55,6 @@ def game_loop():
 
 
 if __name__ == "__main__":
+    repo = TinyDBWorldRepository("./db/world.json")
     print_welcome()
-    game_loop()
+    game_loop(repo)
