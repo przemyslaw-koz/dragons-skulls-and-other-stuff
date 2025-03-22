@@ -3,22 +3,8 @@ world = {
         "desc": "Piękne domy na drzewach migoczą milionami świetlistych kryształów. W powietrzu unosi się delikatna melodia harf i fletów, a śpiew elfickich bardów rozbrzmiewa wśród liści. Powietrze pachnie jaśminem i sosną. To miejsce wydaje się niemal nierealne, jakby stworzone z czystej magii.",
         "options": {"n": "Mglisty Las", "e": "Rzeka Przeznaczenia"},
         "npcs": {
-            "Ailith Świetlista": {
-                "desc": "Elficka bardka, która gra na harfie i opowiada historie o dawnych czasach.",
-                "responses": {
-                    "Kim jesteś?": "Jestem Ailith, bardka i strażniczka dawnych opowieści.",
-                    "Opowiedz historię": "Dawno temu, wśród drzew tego lasu, żył smok, który strzegł pradawnej wiedzy...",
-                    "Co grasz?": "To pieśń o bohaterach, którzy wędrowali po świecie w poszukiwaniu magii.",
-                },
-            },
-            "Lorien Zielonooki": {
-                "desc": "Strażnik wioski, zawsze czujny, ale przyjazny dla podróżnych.",
-                "responses": {
-                    "Kim jesteś?": "Jestem Lorien, strażnik tej wioski. Pilnuję, by nikt nie zakłócał jej spokoju.",
-                    "Czy to bezpieczne miejsce?": "Tak, dopóki ja tu jestem, nikt nie zrobi Wam krzywdy.",
-                    "Co sądzisz o elfickiej magii?": "To część naszej historii. Bez niej nie bylibyśmy tym, kim jesteśmy.",
-                },
-            },
+            "Ailith Świetlista": "Elficka bardka, która gra na harfie i opowiada historie o dawnych czasach.",
+            "Lorien Zielonooki": "Strażnik wioski, zawsze czujny, ale przyjazny dla podróżnych.",
         },
         "items": {
             "Amulet Leśnego Światła": "Migoczący naszyjnik, który rozświetla ciemność delikatnym zielonym blaskiem.",
@@ -28,100 +14,31 @@ world = {
     "Mglisty Las": {
         "desc": "Drzewa w tym lesie są wysokie i smukłe, ich korony znikają w gęstej, mlecznej mgle. Każdy krok wydaje się tłumiony, a cisza, zamiast uspokajać, wzmaga niepokój. Coś przemyka między drzewami – czy to cień, czy może tylko złudzenie? W głębi lasu czuć pradawną, pierwotną moc.",
         "options": {"s": "Wioska Elfów", "w": "Stara Wieża"},
-        "npcs": {
-            "Eldrin Cienisty": {
-                "desc": "Tajemniczy elf-wędrowiec, który zna wszystkie ścieżki tego lasu.",
-                "responses": {
-                    "Kim jesteś?": "Jestem Eldrin, strażnik ścieżek Mglistego Lasu.",
-                    "Czy coś się tu ukrywa?": "Mgła skrywa wiele tajemnic, ale nie każda tajemnica chce być odkryta...",
-                    "Czy spotkałeś ducha?": "Być może... ale czy na pewno chcesz go zobaczyć?",
-                },
-            },
-            "Cichy Szept": {
-                "desc": "Niewidzialna istota, którą można usłyszeć tylko w nocy.",
-                "responses": {
-                    "Kim jesteś?": "Jestem tylko echem dawnych czasów...",
-                    "Dlaczego tu jesteś?": "Czekam, aż ktoś odgadnie moje imię. Wtedy odzyskam swoją postać!",
-                    "Czy mgła jest żywa?": "Mgła widzi. Mgła słucha. Ale nie każdy umie z nią rozmawiać...",
-                },
-            },
-        },
+        "npcs": {},
         "items": {},
     },
     "Rzeka Przeznaczenia": {
         "desc": "Rzeka o kryształowo czystej wodzie leniwie płynie wśród bujnej roślinności. Mówi się, że każdy, kto spojrzy w jej nurt, ujrzy odbicie swej przyszłości. Woda lśni tajemniczym blaskiem, a jej szmer zdaje się być szeptem pradawnych duchów.",
         "options": {"w": "Wioska Elfów", "e": "Złoty Most", "s": "Bagna Zapomnienia"},
-        "npcs": {
-            "Nimfa Azuria": {
-                "desc": "Strażniczka rzeki, której głos przypomina szum wody.",
-                "responses": {
-                    "Kim jesteś?": "Jestem Azuria, duch tej rzeki. Strzegę jej tajemnic.",
-                    "Czy pokażesz mi przyszłość?": "Rzeka pokaże to, czego naprawdę pragniesz zobaczyć...",
-                    "Czy woda mówi?": "Tak, ale tylko ci, którzy słuchają sercem, mogą ją zrozumieć.",
-                },
-            },
-            "Rybak Zefir": {
-                "desc": "Tajemniczy rybak, który nigdy nie złapał żadnej ryby.",
-                "responses": {
-                    "Kim jesteś?": "Nazywają mnie Zefir. Rzucam wędkę, ale nigdy niczego nie łowię...",
-                    "Dlaczego nic nie łapiesz?": "Może to ja czekam, aż coś mnie złowi?",
-                    "Czy rzeka ma dno?": "Niektórzy mówią, że na jej dnie śpi pradawny smok...",
-                },
-            },
-        },
+        "npcs": {},
         "items": {},
     },
     "Złoty Most": {
         "desc": "Stary, kamienny most rozciąga się nad rwącą rzeką. Jego balustrady są zdobione wytłoczonymi w złocie runami, które błyszczą nawet w ciemności. Mówi się, że most jest strażnikiem starożytnych tajemnic i przechodzą przez niego tylko ci, którzy są godni.",
         "options": {"w": "Rzeka Przeznaczenia", "e": "Królestwo Krasnoludów"},
-        "npcs": {
-            "Strażnik Mostu": {
-                "desc": "Stary wojownik, który przepuszcza tylko odważnych podróżników.",
-                "responses": {
-                    "Kim jesteś?": "Jestem strażnikiem tego mostu. Przepuszczam tylko tych, którzy mają czyste serce.",
-                    "Czy mogę przejść?": "To nie ja decyduję... to most wybiera, kto jest godny.",
-                    "Co jest po drugiej stronie?": "Tylko ten, kto przeszedł, zna odpowiedź.",
-                },
-            },
-        },
+        "npcs": {},
         "items": {},
     },
     "Bagna Zapomnienia": {
         "desc": "Rozległe, mgliste bagna rozciągają się po horyzont. Woda jest gęsta i czarna jak atrament. W powietrzu unosi się zapach gnijących liści i dziwne szepty, które wydają się pochodzić znikąd. Każdy, kto tu wejdzie, zaczyna tracić wspomnienia.",
         "options": {"n": "Rzeka Przeznaczenia", "s": "Cmentarzysko Bohaterów"},
-        "npcs": {
-            "Mokradłowy Cień": {
-                "desc": "Postać spowita mgłą, która wydaje się istnieć pomiędzy światami.",
-                "responses": {
-                    "Kim jesteś?": "Jestem echem tych, którzy zapomnieli, kim byli...",
-                    "Czy pamiętasz swoje imię?": "Było kiedyś moje, ale bagna zabrały je na zawsze...",
-                    "Czy bagna mają duszę?": "Każda kropla wody tutaj to czyjeś zapomniane wspomnienie...",
-                },
-            },
-            "Stary Żółw": {
-                "desc": "Olbrzymi, wiekowy żółw, który zdaje się wiedzieć więcej, niż mówi.",
-                "responses": {
-                    "Kim jesteś?": "Nazywają mnie Stary Żółw, bo żyję tu od zawsze...",
-                    "Czy można wyjść z bagien?": "Można, jeśli pamiętasz, skąd przyszedłeś.",
-                    "Czy bagna skrywają skarb?": "Skarbem jest to, co znajdziesz w sobie, gdy tu wejdziesz...",
-                },
-            },
-        },
+        "npcs": {},
         "items": {},
     },
     "Cmentarzysko Bohaterów": {
         "desc": "Starożytne nagrobki porośnięte bluszczem wznoszą się na wzgórzu. Kamienne pomniki przedstawiają postacie w pełnym uzbrojeniu, jakby gotowe do ostatniej bitwy. Wiatr świszcze między płytami, niosąc ciche szepty dawnych wojowników.",
         "options": {"n": "Bagna Zapomnienia", "s": "Ruiny Zamku Cieni"},
-        "npcs": {
-            "Strażnik Mieczy": {
-                "desc": "Duch rycerza, który czuwa nad orężem poległych wojowników.",
-                "responses": {
-                    "Kim jesteś?": "Jestem strażnikiem mieczy, tych, którzy walczyli do końca...",
-                    "Czy miecze są magiczne?": "Niektóre tak, ale każdy z nich nosi historię swojego właściciela.",
-                    "Czy boisz się duchów?": "Ja sam jestem duchem, ale niektóre z nich nawet mnie niepokoją...",
-                },
-            },
-        },
+        "npcs": {},
         "items": {},
     },
     "Ruiny Zamku Cieni": {
@@ -231,7 +148,7 @@ world = {
             "Mały Smok Pyra": {
                 "desc": "Młody, nieporadny smok, który podskakuje wokół i uczy się ziać ogniem.",
                 "responses": {
-                    "Kim jesteś?": "Jestem Pyra! Jeszcze nie umiem dobrze ziać ogniem, ale kiedyś będę wielki!",
+                    "Kim jesteś?": "Jestem Pyra! Jeszcze nie umiem dobrze ziać ogniem, ale kiedyś będę wielki!","
                     "Czy boisz się ludzi?": "Nie, ale zawsze mówią, że smoki są straszne... a ja tylko chcę się bawić!",
                     "Czy masz skarb?": "Mam! Kamyk, który lśni w ciemności! Ale nie oddam go tak łatwo!",
                 },
