@@ -148,7 +148,7 @@ world = {
             "Mały Smok Pyra": {
                 "desc": "Młody, nieporadny smok, który podskakuje wokół i uczy się ziać ogniem.",
                 "responses": {
-                    "Kim jesteś?": "Jestem Pyra! Jeszcze nie umiem dobrze ziać ogniem, ale kiedyś będę wielki!","
+                    "Kim jesteś?": "Jestem Pyra! Jeszcze nie umiem dobrze ziać ogniem, ale kiedyś będę wielki!",
                     "Czy boisz się ludzi?": "Nie, ale zawsze mówią, że smoki są straszne... a ja tylko chcę się bawić!",
                     "Czy masz skarb?": "Mam! Kamyk, który lśni w ciemności! Ale nie oddam go tak łatwo!",
                 },
