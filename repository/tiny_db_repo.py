@@ -1,4 +1,3 @@
-import tinydb
 from tinydb import Query, TinyDB
 
 from repository.base import WorldRepository
