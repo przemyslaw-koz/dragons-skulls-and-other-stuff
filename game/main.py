@@ -6,7 +6,6 @@ from game.npc import talk
 from game.player import Player
 from game.player_actions import get_player_actions, print_basic_actions
 from game.welcome import print_welcome
-from game.world import world
 from repository.tiny_db_repo import TinyDBWorldRepository
 from utils.terminal import clear_screen
 
@@ -20,8 +19,7 @@ def game_loop(repository):
     time.sleep(2)
 
     while True:
-        # TODO: take it from db
-        current = world[player.location]
+        current = repository.get_location(player.location)
 
         print(
             Fore.CYAN
