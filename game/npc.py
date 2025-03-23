@@ -1,3 +1,5 @@
+from typing import Dict
+
 from colorama import Fore, init
 
 from utils.terminal import clear_screen
@@ -27,6 +29,13 @@ npcs_data = {
         },
     },
 }
+
+
+class Npc:
+    def __init__(self, name: str, desc: str, responses: Dict[str, str]):
+        self.name = name
+        self.desc = desc
+        self.responses = responses
 
 
 def talk(player_input):

@@ -12,12 +12,11 @@ class TinyDBWorldRepository(WorldRepository):
         result = self.db.search(self.query[location_name].exists())
         return result[0][location_name] if result else {}
 
+    def get_location_description(self, location_name: str) -> str:
+        location = self.get_location(location_name)
+        return location.get("description", "Nie znaleziono opisu...")
 
-#    @abstractmethod
-#    def get_location_description(self, location_name: str):
-#        """Get location description by name"""
-#        pass
-#
+
 #    @abstractmethod
 #    def get_location_movement_options(self, location_name: str):
 #        """Get location movement options by it's name"""

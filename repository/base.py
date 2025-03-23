@@ -7,11 +7,12 @@ class WorldRepository(ABC):
         """Get full location data - desc, options, npcs, items"""
         pass
 
+    @abstractmethod
+    def get_location_description(self, location_name: str) -> str:
+        """Get location description by name"""
+        pass
 
-#    @abstractmethod
-#    def get_location_description(self, location_name: str):
-#        """Get location description by name"""
-#        pass
+
 #
 #    @abstractmethod
 #    def get_location_movement_options(self, location_name: str):
