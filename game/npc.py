@@ -6,30 +6,6 @@ from utils.terminal import clear_screen
 
 init(autoreset=True)
 
-responses = {
-    "cześć": "Witaj, młody wędrowcze!",
-    "gdzie jestem?": "Jesteś w magicznej krainie",
-}
-
-npcs_data = {
-    "Ailith Świetlista": {
-        "desc": "Elficka bardka, która gra na harfie i opowiada historie o dawnych czasach.",
-        "responses": {
-            "Kim jesteś?": "Jestem Ailith, bardka i strażniczka dawnych opowieści.",
-            "Opowiedz historię": "Dawno temu, wśród drzew tego lasu, żył smok, który strzegł pradawnej wiedzy...",
-            "Co grasz?": "To pieśń o bohaterach, którzy wędrowali po świecie w poszukiwaniu magii.",
-        },
-    },
-    "Lorien Zielonooki": {
-        "desc": "Strażnik wioski, zawsze czujny, ale przyjazny dla podróżnych.",
-        "responses": {
-            "Kim jesteś?": "Jestem Lorien, strażnik tej wioski. Pilnuję, by nikt nie zakłócał jej spokoju.",
-            "Czy to bezpieczne miejsce?": "Tak, dopóki ja tu jestem, nikt nie zrobi Wam krzywdy.",
-            "Co sądzisz o elfickiej magii?": "To część naszej historii. Bez niej nie bylibyśmy tym, kim jesteśmy.",
-        },
-    },
-}
-
 
 class Npc:
     def __init__(self, name: str, desc: str, responses: Dict[str, str]):
@@ -37,9 +13,12 @@ class Npc:
         self.desc = desc
         self.responses = responses
 
+    def talk(self, question: str):
+        return self.responses.get(question, lower(), "Nie rozumiem, o co pytasz.")
 
-def talk(player_input):
-    return responses.get(player_input.lower(), "Nie rozumiem")
+
+# def talk(player_input):
+# return responses.get(player_input.lower(), "Nie rozumiem")
 
 
 def talk_in(location):
