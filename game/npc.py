@@ -14,7 +14,7 @@ class Npc:
         self.responses = responses
 
     def talk(self, question: str):
-        return self.responses.get(question, lower(), "Nie rozumiem, o co pytasz.")
+        return self.responses.get(question.lower(), "Nie rozumiem, o co pytasz.")
 
 
 # def talk(player_input):
