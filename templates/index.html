@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kroniki Zapomnianego Królestwa</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="left-panel">
+            <div class="hero-panel">
+                <div class="hero-image">
+                    Bohater Świata
+                </div>
+                <h2 style="font-family: 'Cinzel Decorative', cursive; color: #e74c3c;">Arkadiusz Stalowy Miecz</h2>
+                <div>
+                    <p>Poziom: 3 | Rasa: Wojownik</p>
+                    <p>Zdrowie: 85/100</p>
+                    <p>Mana: 30/50</p>
+                </div>
+                    
+                <div class="location-map">
+                    <h3>Aktualna Lokacja</h3>
+                    <div hx-get="/location/1/map"
+                         hx-trigger="load"
+                         hx-target="this">
+                        <!-- Domyślna mapa, która zostanie zastąpiona -->
+                        <div class="map-grid">
+                            <div class="map-cell"></div>
+                            <div class="map-cell">
+                                <span class="map-direction north">N</span>
+                                <div class="map-cell-name">Ładowanie...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+
+            <div class="location-panel" 
+                 hx-get="/location/1" 
+                 hx-trigger="load"
+                 hx-target="this">
+                <!-- Domyślna treść, która zostanie zastąpiona -->
+                <h2>Ładowanie lokacji...</h2>
+              <p>Proszę czekać...</p>
+            </div>
+            <div class="interaction-panel">
+                <div class="dialogue-box" id="dialogue-history">
+                    <p><strong style="color: #e74c3c;">Ponury Kelner:</strong> Czego szukasz, wędrowcze?</p>
+                    <p><strong style="color: #3498db;">Ty:</strong> Informacji o okolicznych szlakach.</p>
+                </div>
+                <div class="action-buttons">
+                    <button>Rozmawiaj</button>
+                    <button>Zbadaj</button>
+                    <button>Ekwipunek</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

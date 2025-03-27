@@ -16,13 +16,18 @@ class Npc:
     def talk(self, question: str):
         return self.responses.get(question.lower(), "Nie rozumiem, o co pytasz.")
 
+    @classmethod
+    def from_dict(cls, name: str, data: dict) -> "Npc":
+        return cls(name, data["desc"], data["responses"])
 
-# def talk(player_input):
-# return responses.get(player_input.lower(), "Nie rozumiem")
 
-
-def talk_in(location):
+def talk_in(location: dict) -> None:
+    npcs = {
+        name: Npc.from_dict(name, data["desc"])
+        for name, data in location.get("npcs", {}).items()
+    }
     user_name = "Janek i Julek"
+
     print(Fore.YELLOW + "\n✨ **Porozmawiajmy z mieszkańcami wioski!** ✨\n")
     print("🔎 Wybierzcie kogoś, kto Was interesuje!\n")
     print(

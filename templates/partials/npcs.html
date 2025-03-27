@@ -1,0 +1,11 @@
+<h4>NPC w lokacji {{ loc_id }}:</h4>
+{% for name in npcs %}
+ <button hx-get="/location/{{ loc_id }}/npcs/{{ name | urlencode }}" 
+ hx-target="#info-content" 
+ hx-swap="innerHTML"
+ hx-on::after-request="document.getElementById('npc-name').value = '{{ name }}';
+ document.getElementById('loc-id').value = '{{ loc_id }}';
+ document.querySelector('#info-box button').disabled = false;">
+ {{ name }}
+ </button>
+{% endfor %}

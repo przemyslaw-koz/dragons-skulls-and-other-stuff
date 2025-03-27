@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kroniki Zapomnianego Królestwa - Stworzenie Postaci</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="left-panel">
+            <div class="hero-panel">
+                <div class="hero-image">
+                    Stwórz Bohatera
+                </div>
+                <h2 style="font-family: 'Cinzel Decorative', cursive; color: #e74c3c;">Kreator Postaci</h2>
+                <div class="character-classes">
+                    <h3>Wybierz Klasę</h3>
+                    <div class="class-selection">
+                        <div class="class-option">
+                            <h4>Wojownik</h4>
+                            <p>Silny i odważny, specjalizujący się w walce wręcz.</p>
+                        </div>
+                        <div class="class-option">
+                            <h4>Mag</h4>
+                            <p>Mistrz magii, władający potężnymi zaklęciami.</p>
+                        </div>
+                        <div class="class-option">
+                            <h4>Łowca</h4>
+                            <p>Zręczny tropiciel, mistrz łuku i skradania.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="location-panel">
+                <h2>Stwórz Swoją Postać</h2>
+                <form 
+                    hx-post="/game/start" 
+                    hx-target="#character-creation-result"
+                    class="character-creation-form">
+                    <div class="form-group">
+                        <label for="character-name">Imię Bohatera</label>
+                        <input 
+                            type="text" 
+                            id="character-name" 
+                            name="character_name" 
+                            required 
+                            placeholder="Wpisz imię swojego bohatera"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="character-class">Wybierz Klasę</label>
+                        <select 
+                            id="character-class" 
+                            name="character_class" 
+                            required>
+                            <option value="">-- Wybierz Klasę --</option>
+                            <option value="warrior">Wojownik</option>
+                            <option value="mage">Mag</option>
+                            <option value="hunter">Łowca</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="character-race">Wybierz Rasę</label>
+                        <select 
+                            id="character-race" 
+                            name="character_race" 
+                            required>
+                            <option value="">-- Wybierz Rasę --</option>
+                            <option value="human">Człowiek</option>
+                            <option value="elf">Elf</option>
+                            <option value="dwarf">Krasnolud</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="start-adventure-btn">
+                        Rozpocznij Przygodę
+                    </button>
+                </form>
+                <div id="character-creation-result"></div>
+            </div>
+            <div class="interaction-panel">
+                <div class="dialogue-box">
+                    <p><strong style="color: #3498db;">Mistrz Gry:</strong> Witaj, przybyszu! Czas stworzyć legendę, która rozbrzmi w Kronikach Zapomnianego Królestwa.</p>
+                    <p><strong style="color: #e74c3c;">Narrator:</strong> Każdy wybór ukształtuje twoją przyszłą podróż...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

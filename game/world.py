@@ -337,4 +337,50 @@ world = {
         },
         "items": {},
     },
+    "Jaskinia Orków": {
+        "desc": "Mroczna, wilgotna jaskinia, w której słychać odbijające się echem dudnienie bębnów. Na ścianach widnieją prymitywne malowidła przedstawiające bitwy i łupy.",
+        "options": {"n": "Mroczna Knieja", "s": "Zapomniane Katakumby"},
+        "npcs": {
+            "Grosh, Wódz Orków": {
+                "desc": "Olbrzymi, barczysty ork w futrzanej pelerynie, trzymający topór większy niż człowiek.",
+                "responses": {
+                    "Kim jesteś?": "Jestem Grosh! Najsilniejszy wódz orków! Nie boisz się mnie?",
+                    "Czy orki lubią walczyć?": "Ork bez walki to jak miecz bez ostrza! Każdego dnia szukamy chwały!",
+                    "Czy masz skarb?": "Mam wiele skarbów! Ale jeśli chcesz jeden, musisz udowodnić swoją siłę!",
+                },
+            },
+            "Mog, Szaman Orków": {
+                "desc": "Stary ork o bladej skórze, owinięty w kościane naszyjniki i futra, mamrocze zaklęcia przy ognisku.",
+                "responses": {
+                    "Kim jesteś?": "Jestem Mog. Widzę przyszłość, rozmawiam z duchami. Może widzę i ciebie... w przyszłości?",
+                    "Czy orki używają magii?": "Orki mają własną magię. Silniejszą niż ludzkie sztuczki!",
+                    "Czy znasz jakieś proroctwo?": "Widzę ciemność, ogień... i wybór, który zmieni wszystko...",
+                },
+            },
+        },
+        "items": {},
+    },
+    "Zapomniane Katakumby": {
+        "desc": "Stare podziemia pełne kurzu i pękających trumien. Powietrze przesycone jest zapachem wilgoci i pradawnej magii. Gdzieniegdzie błyskają oczy stworzeń czających się w mroku.",
+        "options": {"n": "Jaskinia Orków", "e": "Świątynia Kości"},
+        "npcs": {
+            "Kościany Władca": {
+                "desc": "Wysoki szkielet w zbroi, trzymający miecz pokryty runami, których blask nigdy nie gaśnie.",
+                "responses": {
+                    "Kim jesteś?": "Byłem królem, nim zapomniano o moim imieniu. Teraz jestem cieniem samego siebie...",
+                    "Czy kościotrupy czują strach?": "Strach? To uczucie dla żywych. My mamy tylko wspomnienia...",
+                    "Czy można wyjść z katakumb?": "Można wejść i można wyjść... ale nie każdy opuszcza je jako ten sam człowiek.",
+                },
+            },
+            "Szlamowaty Stwór": {
+                "desc": "Lśniąca, pulsująca masa zielonego szlamu, która zdaje się powoli pełzać w twoją stronę.",
+                "responses": {
+                    "Czy rozumiesz mnie?": "...BLUB... BLUB... (coś w rodzaju porozumienia)",
+                    "Czy masz kości?": "BLUUUUUB... (zdecydowane zaprzeczenie)",
+                    "Czy jesteś głodny?": "BLUB-BLUB! (tak, ale czy ciebie? Tego nie wiadomo...)",
+                },
+            },
+        },
+        "items": {},
+    },
 }

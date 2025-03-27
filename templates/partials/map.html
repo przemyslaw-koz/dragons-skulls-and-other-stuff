@@ -1,0 +1,28 @@
+<!-- Location Map -->
+<div class="map-grid">
+    <div class="map-cell"></div>
+    <div class="map-cell {% if 'n' in location.map_options %}{% else %}disabled{% endif %}">
+        <span class="map-direction north">N</span>
+        <div class="map-cell-name">{{ location.map_options.get('n', 'Niedostępne') }}</div>
+    </div>
+    <div class="map-cell"></div>
+    
+    <div class="map-cell {% if 'w' in location.map_options %}{% else %}disabled{% endif %}">
+        <span class="map-direction west">W</span>
+        <div class="map-cell-name">{{ location.map_options.get('w', 'Niedostępne') }}</div>
+    </div>
+    <div class="map-cell current">
+        <div class="map-cell-name">{{ location.name }}</div>
+    </div>
+    <div class="map-cell {% if 'e' in location.map_options %}{% else %}disabled{% endif %}">
+        <span class="map-direction east">E</span>
+        <div class="map-cell-name">{{ location.map_options.get('e', 'Niedostępne') }}</div>
+    </div>
+    
+    <div class="map-cell"></div>
+    <div class="map-cell {% if 's' in location.map_options %}{% else %}disabled{% endif %}">
+        <span class="map-direction south">S</span>
+        <div class="map-cell-name">{{ location.map_options.get('s', 'Niedostępne') }}</div>
+    </div>
+    <div class="map-cell"></div>
+</div>
